@@ -1,9 +1,9 @@
-document.pdf : document.md examples/*.dsp
+FaustUsage.pdf : FaustUsage.md examples/*.dsp
 	make -C examples
-	pandoc document.md -o document.pdf --from markdown --template=eisvogel --listings
+	pandoc FaustUsage.md -o FaustUsage.pdf --from markdown --template=eisvogel --listings --pdf-engine=xelatex
 
 clean:
-	rm -f document.pdf
+	rm -f FaustUsage.pdf
 	make -C examples clean
 
 
